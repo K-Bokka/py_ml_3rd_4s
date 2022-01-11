@@ -1,0 +1,228 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n# Spark server test",
+      "user": "anonymous",
+      "dateUpdated": "2022-01-11 07:27:26.489",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eSpark server test\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1641880075682_1266991470",
+      "id": "paragraph_1641880075682_1266991470",
+      "dateCreated": "2022-01-11 05:47:55.682",
+      "dateStarted": "2022-01-11 07:27:26.501",
+      "dateFinished": "2022-01-11 07:27:26.580",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark\n\nspark.version",
+      "user": "anonymous",
+      "dateUpdated": "2022-01-11 07:27:31.668",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres3\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m \u003d 3.1.2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1641880353512_992585073",
+      "id": "paragraph_1641880353512_992585073",
+      "dateCreated": "2022-01-11 05:52:33.512",
+      "dateStarted": "2022-01-11 07:27:31.730",
+      "dateFinished": "2022-01-11 07:27:32.559",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark\n\ncase class People(name: String, age: Int)\nvar df \u003d spark.createDataFrame(List(People(\"jeff\", 23), People(\"andy\", 20)))\ndf.createOrReplaceTempView(\"people\")",
+      "user": "anonymous",
+      "dateUpdated": "2022-01-11 07:27:33.905",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "defined class People\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [name: string, age: int]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1641880532354_1128930357",
+      "id": "paragraph_1641880532354_1128930357",
+      "dateCreated": "2022-01-11 05:55:32.355",
+      "dateStarted": "2022-01-11 07:27:33.986",
+      "dateFinished": "2022-01-11 07:27:35.232",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\n\nselect * from people",
+      "user": "anonymous",
+      "dateUpdated": "2022-01-11 07:27:37.618",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "age": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tage\njeff\t23\nandy\t20\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1641885950279_1584887241",
+      "id": "paragraph_1641885950279_1584887241",
+      "dateCreated": "2022-01-11 07:25:50.279",
+      "dateStarted": "2022-01-11 07:27:37.702",
+      "dateFinished": "2022-01-11 07:27:38.442",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-01-11 07:27:37.701",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1641886057700_1258732263",
+      "id": "paragraph_1641886057700_1258732263",
+      "dateCreated": "2022-01-11 07:27:37.700",
+      "status": "READY"
+    }
+  ],
+  "name": "00_spark_server_test",
+  "id": "2GUUNQBJ1",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

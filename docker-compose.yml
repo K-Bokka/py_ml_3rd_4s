@@ -1,0 +1,16 @@
+version: '3'
+services:
+  zeppelin:
+    image: apache/zeppelin:0.10.0
+    ports:
+      - "8080:8080"
+      - "4040:4040"
+    environment:
+      ZEPPELIN_LOG_DIR: /logs
+      ZEPPELIN_NOTEBOOK_DIR: /notebook
+      SPARK_HOME: /opt/spark
+      ZEPPELIN_NOTEBOOK_STORAGE: org.apache.zeppelin.notebook.repo.VFSNotebookRepo
+    volumes:
+      - ./logs:/logs
+      - ./notebook:/notebook
+      - ./spark/spark-3.1.2-bin-hadoop3.2:/opt/spark

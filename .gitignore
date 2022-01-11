@@ -1,2 +1,7 @@
 /spark/*
 !/spark/.keep
+/zeppelin/*
+!/zeppelin/.keep
+!/zeppelin/zeppelin-env.sh
+/logs/*
+!/logs/.keep
