@@ -128,7 +128,7 @@
     {
       "text": "%spark.sql\n\nselect * from people",
       "user": "anonymous",
-      "dateUpdated": "2022-01-11 07:27:37.618",
+      "dateUpdated": "2022-01-11 08:08:26.434",
       "progress": 0,
       "config": {
         "editorSetting": {
@@ -170,7 +170,8 @@
             }
           }
         },
-        "enabled": true
+        "enabled": true,
+        "tableHide": true
       },
       "settings": {
         "params": {},
@@ -196,22 +197,61 @@
       "status": "FINISHED"
     },
     {
-      "text": "%spark.sql\n",
+      "text": "%spark\n\nval df \u003d spark.read.csv(\"/mnt/data/iris/iris.data\")\ndf.show",
       "user": "anonymous",
-      "dateUpdated": "2022-01-11 07:27:37.701",
+      "dateUpdated": "2022-01-11 08:12:23.941",
       "progress": 0,
-      "config": {},
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+---+---+---+-----------+\n|_c0|_c1|_c2|_c3|        _c4|\n+---+---+---+---+-----------+\n|5.1|3.5|1.4|0.2|Iris-setosa|\n|4.9|3.0|1.4|0.2|Iris-setosa|\n|4.7|3.2|1.3|0.2|Iris-setosa|\n|4.6|3.1|1.5|0.2|Iris-setosa|\n|5.0|3.6|1.4|0.2|Iris-setosa|\n|5.4|3.9|1.7|0.4|Iris-setosa|\n|4.6|3.4|1.4|0.3|Iris-setosa|\n|5.0|3.4|1.5|0.2|Iris-setosa|\n|4.4|2.9|1.4|0.2|Iris-setosa|\n|4.9|3.1|1.5|0.1|Iris-setosa|\n|5.4|3.7|1.5|0.2|Iris-setosa|\n|4.8|3.4|1.6|0.2|Iris-setosa|\n|4.8|3.0|1.4|0.1|Iris-setosa|\n|4.3|3.0|1.1|0.1|Iris-setosa|\n|5.8|4.0|1.2|0.2|Iris-setosa|\n|5.7|4.4|1.5|0.4|Iris-setosa|\n|5.4|3.9|1.3|0.4|Iris-setosa|\n|5.1|3.5|1.4|0.3|Iris-setosa|\n|5.7|3.8|1.7|0.3|Iris-setosa|\n|5.1|3.8|1.5|0.3|Iris-setosa|\n+---+---+---+---+-----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [_c0: string, _c1: string ... 3 more fields]\n"
+          }
+        ]
+      },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://69c8ae96e160:4040/jobs/job?id\u003d1"
+            },
+            {
+              "jobUrl": "http://69c8ae96e160:4040/jobs/job?id\u003d2"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
       "jobName": "paragraph_1641886057700_1258732263",
       "id": "paragraph_1641886057700_1258732263",
       "dateCreated": "2022-01-11 07:27:37.700",
-      "status": "READY"
+      "dateStarted": "2022-01-11 08:12:24.028",
+      "dateFinished": "2022-01-11 08:12:26.474",
+      "status": "FINISHED"
     }
   ],
   "name": "00_spark_server_test",
